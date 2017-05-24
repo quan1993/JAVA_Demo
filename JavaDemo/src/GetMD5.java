@@ -8,7 +8,7 @@ public class GetMD5 {
 
 	public static void main(String[] args) {
 		/**
-		 * 根据文件内容获得MD5值，然后比较不同时刻的MD5值，判断文件内容是否发生改变
+		 * 鏍规嵁鏂囦欢鍐呭鑾峰緱MD5鍊硷紝鐒跺悗姣旇緝涓嶅悓鏃跺埢鐨凪D5鍊硷紝鍒ゆ柇鏂囦欢鍐呭鏄惁鍙戠敓鏀瑰彉
 		 */
 
       try {
@@ -20,7 +20,7 @@ public class GetMD5 {
 			instance.update(buffer, 0, length);
 		}
 		BigInteger bigInteger = new BigInteger(1, instance.digest());
-		String value = bigInteger.toString(16); //将bigInteger以十六进制的形式转化为String
+		String value = bigInteger.toString(16); //锟斤拷bigInteger锟斤拷十锟斤拷锟斤拷锟狡碉拷锟斤拷式转锟斤拷为String
 		
 		System.out.println(value);
 		fileInputStream.close();
