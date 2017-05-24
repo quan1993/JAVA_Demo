@@ -5,7 +5,7 @@ import java.time.format.DateTimeFormatter;
 public class GetAreaTime {
 	
 	/**
-	 * 得到指定地区的当前时间
+	 * 鑾峰緱鎸囧畾鍦板尯褰撳墠鏃堕棿
 	 * @param args
 	 */
 
