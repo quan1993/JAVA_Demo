@@ -14,7 +14,7 @@ public class WriteXml {
 	public static void main(String[] args) {
 		
 		/**
-		 * ½«Êı¾İĞ´Èëµ½xmlÎÄ¼şÖĞ
+		 * å°†æ•°æ®å†™å…¥åˆ°xmlæ–‡ä»¶ä¸­
 		 */
 		
 		
