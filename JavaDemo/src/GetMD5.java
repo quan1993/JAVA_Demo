@@ -20,7 +20,7 @@ public class GetMD5 {
 			instance.update(buffer, 0, length);
 		}
 		BigInteger bigInteger = new BigInteger(1, instance.digest());
-		String value = bigInteger.toString(16); //��bigInteger��ʮ�����Ƶ���ʽת��ΪString
+		String value = bigInteger.toString(16); //按照16进制保存
 		
 		System.out.println(value);
 		fileInputStream.close();

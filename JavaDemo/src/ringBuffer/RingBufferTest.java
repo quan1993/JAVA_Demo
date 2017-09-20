@@ -34,8 +34,8 @@ public class RingBufferTest {
 		workerPool.start(Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors()));  
 
 		final CountDownLatch latch = new CountDownLatch(1);
-		for (int i = 0; i < 10; i++) {  
-			final Producer producer = new Producer(ringBuffer);
+		for (int i = 0; i < 3; i++) {  
+			final Producer producer = new Producer(ringBuffer, "producer" + i);
 			new Thread(new Runnable() {
 				@Override
 				public void run() {
@@ -44,7 +44,7 @@ public class RingBufferTest {
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 					}
-					for(int j = 0; j < 10; j++){
+					for(int j = 0; j < 3; j++){
 						producer.onData("j=" + j + "  " + UUID.randomUUID().toString());
 					}
 				}

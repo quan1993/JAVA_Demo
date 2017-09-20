@@ -16,9 +16,10 @@ public class Consumer implements WorkHandler<Order>{
 	@Override
 	public void onEvent(Order order) throws Exception {
 		//count.get()得到的值可能相同
-		System.out.println("当前消费者: " + this.consumerId + "，消费信息：" + order.getId() + "count:" + count.get());
+		System.out.println("当前消费者: " + this.consumerId + "，消费信息：" + order.getId() 
+		        + "生产者：" + order.getName() + "   count:" + count.getAndIncrement());
 		//count的增加操作是原子性的，线程安全
-		count.incrementAndGet();
+//		count.incrementAndGet();
 	}
 
 	public int getCount(){

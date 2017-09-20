@@ -1,3 +1,4 @@
+import java.text.SimpleDateFormat;
 import java.time.Clock;
 import java.time.Instant;
 import java.time.LocalDateTime;
@@ -23,6 +24,12 @@ public class LocalDateTimeTest {
 		Instant instant = Instant.now(Clock.system(zoneId));
         System.out.println(instant);
         System.out.println(Clock.systemUTC().toString());
+        
+        /*   将获取的long形式时间转为指定的时间格式  */
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        long time = System.currentTimeMillis();
+        String ss = simpleDateFormat.format(time);
+        System.out.println("time ：" + ss);
 	}
 
 }
