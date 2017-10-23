@@ -56,7 +56,6 @@ public class IP2Int {
 	 * @return
 	 */
 	public boolean isIPv4Address(String ip){
-//		String lower = "(\\d|[1-9]\\d|1\\d{2}|2[0-4]\\d|25[0-5])";  //0-255的数字
 		String lower = "(\\d|[1-9]\\d|1\\d{2}|2[0-4]\\d|25[0-5])";  //0-255的数字
 		String regex = lower + "\\." + lower + "{3}";
 		System.out.println(regex);

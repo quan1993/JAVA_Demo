@@ -26,6 +26,17 @@ import org.apache.flume.serialization.EventSerializer;
 import org.apache.flume.serialization.EventSerializerFactory;
 import org.apache.flume.sink.AbstractSink;
 
+/**
+ * 使用时，将工程导成jar包，放到libs目录下，在配置文件中做如下配置
+ * agent.sinks.hdfssinkLvi24.type = flume.FileSink
+agent.sinks.hdfssinkLvi24.sink.directory = /data/logs/flume/lvi/%Y%m%d/
+agent.sinks.hdfssinkLvi24.sink.filePrefix = flume_bjxd04.%Y%m%d%H%M
+agent.sinks.hdfssinkLvi24.sink.fileSuffix = .log
+agent.sinks.hdfssinkLvi24.sink.rollInterval = 600
+agent.sinks.hdfssinkLvi24.channel = memoryChannelLvi24
+ * @author ampthon
+ *
+ */
 public class FileSink  extends AbstractSink implements
 Configurable {
 
